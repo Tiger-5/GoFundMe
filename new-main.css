@@ -1,0 +1,644 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Space+Mono&display=swap"rel="stylesheet");
+
+@font-face{
+  font-family: GeneralSans;
+  src: url(GeneralSans_Complete/Fonts/OTF/GeneralSans-Regular.otf);
+}
+
+@font-face{
+  font-family: GeneralSansBold;
+  src: url(GeneralSans_Complete/Fonts/OTF/GeneralSans-Bold.otf);
+}
+
+@font-face{
+  font-family: GeneralSansSemibold;
+  src: url(GeneralSans_Complete/Fonts/OTF/GeneralSans-Semibold.otf);
+
+}
+
+
+body{
+  /* Change the height to fix the bug
+      for the disclaimer section to the 
+      'thank you/donation' part just increase 
+      the hight to fix it
+      
+      Also effects the text with the 'vodka for life' 
+      it overlays the paragrghs */
+  
+}
+
+
+
+
+
+/* Nav and hero section */
+
+.logo{
+  height: 100px;
+  width: auto;
+}
+
+.navbar{
+  display: flex;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: 3%;
+}
+
+.main-texth1 {
+  font-family: GeneralSansSemibold;
+  font-size: clamp(40px, 10vw, 140px); /* Make font size responsive */
+  color: rgba(255, 255, 255, 0.846);
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+
+/* Variables */
+:root {
+  --color-bg: #111111;
+  --color-text: #ffffff;
+  --color-text-dim: rgba(255, 255, 255, 0.6);
+  --font-body: "TheGoodMonolith", sans-serif;
+  --font-title: "PP Neue Montreal", sans-serif;
+  --font-size-base: 0.75rem;
+  --spacing-base: 1rem;
+  --transition-medium: 0.3s ease;
+}
+
+/* Reset */
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+  overflow-x: hidden;
+}
+
+/* Link styles */
+a {
+  color: var(--color-text);
+  text-decoration: none;
+  opacity: 0.7;
+  transition: color var(--transition-medium);
+  position: relative;
+  display: inline-block;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--color-text);
+  z-index: -1;
+  transition: width 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+a:hover {
+  color: black;
+  mix-blend-mode: difference;
+  opacity: 1;
+}
+
+/* Layout */
+.values {
+  grid-column: 5 / span 2; 
+  margin-left: 3.2%;
+  font-size: 50px;
+  font-family: GeneralSansbold;
+  display: flex;
+  align-items: center;
+  
+}
+
+.donoLL{
+  border: 1px solid white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* With the vodka bottles theres gonna
+    be one for mobile and PC and if user
+    have mobile they will see the mobile version
+    of the vodka images. this is because the posistion
+    setting on mobile and PC is different and har to
+    controll and sync with the same position.
+ */
+
+.vodka1{
+  height: 40rem;
+  width: auto;
+  position: relative;
+  top: -60rem;
+  left: 65rem;
+  rotate: 30deg;
+}
+
+.vodka2{
+  height: 35rem;
+  width: auto;
+  position: relative;
+  top: -25rem;
+  left: 7rem;
+  rotate: 160deg;
+  opacity: 50%;
+}
+
+/* Seems like 
+    the inspect mode isn't working
+    so can you check it yourself 
+    on your mobile for the vodka image thing
+    havinga a hard time adjusting it for
+    mobile and PC 
+    
+  */
+
+
+/* Add these classes for desktop/mobile images */
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+  
+  .mobile-only {
+    display: block;
+  }
+}
+
+/* Hero Section Size Adjustment thing yeah */
+
+
+@media screen and (max-width: 1900px) {
+  .vodka1 {
+    height: 35rem;
+    
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .vodka1 {
+    height: 26rem;
+    left: 30rem;
+    top: -25rem;
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+  .main-texth1 {
+    font-size: clamp(55px, 25vw, 117px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-texth1 {
+    font-size: clamp(30px, 10vw, 80px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-texth1 {
+    font-size: clamp(35px, 15vw, 70px);
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Update CSS Reset to be more aggressive */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-background: rgb(15, 15, 15);
+  --color-foreground: rgb(230, 225, 215);
+  --color-accent: rgb(200, 180, 160);
+  --font-primary: "Inter", sans-serif;
+  --font-secondary: "Space Mono", monospace;
+  --spacing-margin: 32px;
+  --spacing-gutter: 16px;
+  --spacing-padding: 80px;
+}
+
+/* Update body styles */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.footersec {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-primary);
+  background: radial-gradient(
+    circle at 10% 20%,
+    var(--color-background) 0%,
+    rgb(0, 0, 0) 90%
+  );
+  color: var(--color-foreground);
+  letter-spacing: -0.03em;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Hero section */
+.hero {
+  margin: 0;
+  padding: 0;
+  height: 200vh;
+  width: 100%;
+  position: relative;
+}
+
+.hero__content {
+  position: absolute;
+  top: 75%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__text-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__caption {
+  font-size: clamp(0.7rem, 1vw, 0.85rem);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--color-accent);
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+  opacity: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.hero__caption--top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: var(--spacing-margin);
+}
+
+.hero__caption--bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: var(--spacing-margin);
+}
+
+.hero__main-text {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--color-foreground);
+  font-family: var(--font-primary);
+  text-align: center;
+  max-width: 50rem;
+  margin: 0 auto;
+  margin-bottom: 2rem; /* Add space between paragraphs */
+  opacity: 0;
+  font-size: 23px;
+}
+
+/* Add this to remove margin from last paragraph */
+.hero__main-text:last-child {
+  margin-bottom: 0;
+}
+
+.boldthis{
+  color: white;
+  font-weight: 700;
+}
+
+/* Split type animation effects */
+.word,
+.char {
+  display: inline-block;
+}
+
+/* Footer section */
+.footer {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #111111;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer__top {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin: 0;
+  padding: 0;
+}
+
+.footer__title {
+  font-family: var(--font-primary);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: rgba(200, 195, 185, 0.8);
+  font-size: 5vw;
+  line-height: 1;
+  white-space: nowrap;
+  margin: 0;
+  text-align: center; /* Ensure text is centered */
+}
+
+.footer__bottom {
+  height: 50vh;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__dots-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-padding);
+}
+
+.footer__dot {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.15s ease-out, opacity 0.15s ease-out,
+    width 0.15s ease-out, height 0.15s ease-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Lenis smooth scrolling styles */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+:root {
+  --warm-off-black: #232323;
+  --warm-off-white: #ffffff;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--warm-off-black);
+  color: var(--warm-off-white);
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+/* Animated noise effect */
+body::before {
+  content: "";
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: transparent
+    url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+  background-size: 300px 300px;
+  animation: noise-animation 0.3s steps(5) infinite;
+  opacity: 1;
+  will-change: transform;
+  z-index: 100;
+  pointer-events: none;
+}
+
+@keyframes noise-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  10% {
+    transform: translate(-2%, -3%);
+  }
+
+  20% {
+    transform: translate(-4%, 2%);
+  }
+
+  30% {
+    transform: translate(2%, -4%);
+  }
+
+  40% {
+    transform: translate(-2%, 5%);
+  }
+
+  50% {
+    transform: translate(-4%, 2%);
+  }
+
+  60% {
+    transform: translate(3%, 0);
+  }
+
+  70% {
+    transform: translate(0, 3%);
+  }
+
+  80% {
+    transform: translate(-3%, 0);
+  }
+
+  90% {
+    transform: translate(2%, 2%);
+  }
+
+  100% {
+    transform: translate(1%, 0);
+  }
+}
+
+/* Dust/Scratches background effect for the entire site */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://img.freepik.com/premium-photo/white-dust-scratches-black-background_279525-2.jpg?w=640");
+  background-repeat: repeat;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* Add responsive text styles */
+@media screen and (max-width: 1200px) {
+  .hero__main-text {
+    font-size: 20px;
+    max-width: 40rem;
+  }
+
+  .footer__title {
+    font-size: 4vw;
+  }
+
+  .logo {
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero__main-text {
+    font-size: 16px;
+    max-width: 30rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero__caption {
+    font-size: 0.7rem;
+  }
+
+  .footer__title {
+    font-size: 3.5vw;
+  }
+
+  .logo {
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero__main-text {
+    font-size: 14px;
+    max-width: 90%;
+    margin-bottom: 1rem;
+  }
+
+  .hero__caption {
+    font-size: 0.6rem;
+  }
+
+  .footer__title {
+    font-size: 8vw;
+  }
+
+  .logo {
+    height: 40px;
+  }
+  
+  .navbar {
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
