@@ -2,17 +2,17 @@
 
 @font-face{
   font-family: GeneralSans;
-  src: url(GeneralSans_Complete/Fonts/OTF/GeneralSans-Regular.otf);
+  src: url(GeneralSans-Regular.otf);
 }
 
 @font-face{
   font-family: GeneralSansBold;
-  src: url(GeneralSans_Complete/Fonts/OTF/GeneralSans-Bold.otf);
+  src: url(GeneralSans-Bold.otf);
 }
 
 @font-face{
   font-family: GeneralSansSemibold;
-  src: url(GeneralSans_Complete/Fonts/OTF/GeneralSans-Semibold.otf);
+  src: url(GeneralSans-Semibold.otf);
 
 }
 
