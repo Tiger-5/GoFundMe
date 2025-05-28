@@ -47,7 +47,7 @@ body{
 }
 
 .main-texth1 {
-  font-family: GeneralSansSemibold;
+  font-family: var(--font-primary);
   font-size: clamp(40px, 10vw, 140px); /* Make font size responsive */
   color: rgba(255, 255, 255, 0.846);
   margin-left: 3%;
@@ -92,6 +92,8 @@ a {
   transition: color var(--transition-medium);
   position: relative;
   display: inline-block;
+  font-family: var(--font-primary);
+  font-weight: 700;
 }
 
 a::after {
