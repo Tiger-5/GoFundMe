@@ -305,6 +305,7 @@ body {
   .hero {
      height: 150vh;
   }
+}
 
 .hero__content {
   position: absolute;
@@ -321,6 +322,7 @@ body {
   .hero__content {
      top: 65%;
   }
+}
 
 .hero__text-wrapper {
   position: relative;
