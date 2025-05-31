@@ -301,6 +301,11 @@ body {
   position: relative;
 }
 
+@media screen and (max-width: 768px) {
+  .hero {
+     height: 150vh;
+  }
+
 .hero__content {
   position: absolute;
   top: 75%;
@@ -311,6 +316,11 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+@media screen and (max-width: 768px) {
+  .hero__content {
+     top: 65%;
+  }
 
 .hero__text-wrapper {
   position: relative;
