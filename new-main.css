@@ -17,15 +17,15 @@
 }
 
 
-body{
-  /* Change the height to fix the bug
-      for the disclaimer section to the 
-      'thank you/donation' part just increase 
-      the hight to fix it
-      
-      Also effects the text with the 'vodka for life' 
-      it overlays the paragrghs */
-  
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+body {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
 }
 
 
